@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react'
-import TextArea from '../components/TextArea'
-import SendButton from '../components/SendButton'
-import styled from 'styled-components/macro'
+import Chatinput from '../components/Chatinput'
 
 function Tab1() {
+    const [chat, setChat] = useState([])
+    console.log(chat)
+
     return (
         <IonPage>
             <IonHeader>
@@ -12,21 +13,9 @@ function Tab1() {
                     <IonTitle>Chat</IonTitle>
                 </IonToolbar>
             </IonHeader>
-
-            <Chattools>
-                <TextArea />
-                <SendButton />
-            </Chattools>
+            <Chatinput chat={chat} setChat={setChat}/>
         </IonPage>
     )
 }
-
-const Chattools = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 5px;
-`
 
 export default Tab1

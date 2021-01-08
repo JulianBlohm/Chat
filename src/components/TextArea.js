@@ -1,17 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components/macro'
-
-function TextArea() {
-    const [text, setText] = useState('')
-
-    return (
-        <ChatInput
-            value={text}
-            onChange={(event) => setText(event.target.value)}
-            placeholder="Nachricht"
-        />
-    )
-}
 
 const ChatInput = styled.textarea`
     color: white;
@@ -29,5 +17,7 @@ const ChatInput = styled.textarea`
     resize: none;
     appearance: none;
 `
+
+const TextArea = (props) => <ChatInput {...props} />
 
 export default TextArea
