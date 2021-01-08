@@ -3,7 +3,8 @@ import { IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react'
 import TextArea from '../components/TextArea'
 import styled from 'styled-components/macro'
 
-const Tab1: React.FC = () => {
+
+function Tab1() {
     return (
         <IonPage>
             <IonHeader>
@@ -11,11 +12,17 @@ const Tab1: React.FC = () => {
                     <IonTitle>Chat</IonTitle>
                 </IonToolbar>
             </IonHeader>
-            
-            <TextArea/>
 
+            <Chatarea>
+                <TextArea />
+            </Chatarea>
         </IonPage>
     )
 }
+
+const Chatarea = styled.div`
+width: 100%;
+padding: 20px;
+`
 
 export default Tab1
