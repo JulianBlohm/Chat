@@ -18,6 +18,7 @@ const ChatInput = styled.textarea`
     background: #004b6e;
     border-radius: 5px;
     padding: 10px;
+    margin-right: 5px;
     display: block;
     width: 100%;
     max-width: 100%;

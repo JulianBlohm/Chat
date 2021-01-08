@@ -1,15 +1,14 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { IonIcon, IonButton } from '@ionic/react';
 
+const Button = styled.button`
+    display: inline-block;
+    background: #519e1e;
+    border-radius: 50%;
+    min-width: 50px;
+    min-height: 50px;
+`
 
-function SendButton() {
-
-    return (
-        <ion-button>
-            <ion-icon name="paper-plane-outline"></ion-icon>
-        </ion-button>
-    )
-}
+const SendButton = (props) => <Button {...props} />
 
 export default SendButton
