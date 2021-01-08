@@ -1,5 +1,6 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import ChatInput from '../components/ChatInput'
 
 const Tab1: React.FC = () => {
   return (
@@ -9,13 +10,15 @@ const Tab1: React.FC = () => {
           <IonTitle>Chat</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+
+      <ChatInput/>
+
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 1</IonTitle>
           </IonToolbar>
         </IonHeader>
-      </IonContent>
+    
     </IonPage>
   );
 };
