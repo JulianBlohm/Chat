@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 import TextArea from './TextArea'
 import SendButton from './SendButton'
+import { ReactComponent as Icon } from '../assets/paper-plane-outline.svg'
 
 function Chatinput({ chat, setChat }) {
     const [text, setText] = useState('')
@@ -23,7 +24,10 @@ function Chatinput({ chat, setChat }) {
                 onChange={(event) => setText(event.target.value)}
                 placeholder="Nachricht"
             />
-            <SendButton onClick={handleSubmitText} />
+
+            <SendButton onClick={handleSubmitText}>
+                <SendIcon />
+            </SendButton>
         </Chattools>
     )
 }
@@ -37,6 +41,11 @@ const Chattools = styled.form`
     background: black;
     position: absolute;
     bottom: 0;
+`
+
+const SendIcon = styled(Icon)`
+width: 25px;
+height: auto;
 `
 
 export default Chatinput
