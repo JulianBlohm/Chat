@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-function Chat({chat}) {
+function Chatlist({chat}) {
     return (
         <MessageArea>
             {chat.map((message) => 
@@ -30,4 +30,4 @@ background: #519e1e;
 color: white;
 `
 
-export default Chat
+export default Chatlist

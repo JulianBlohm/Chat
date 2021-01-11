@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react'
 import Chatinput from '../components/Chatinput'
-import Chat from '../components/Chat'
+import Chatlist from '../components/Chatlist'
 import styled from 'styled-components/macro'
 
 function Tab1() {
@@ -17,7 +17,7 @@ function Tab1() {
                     <IonTitle>Chat</IonTitle>
                 </IonToolbar>
             </IonHeader>
-            <Chat chat={chat}/>
+            <Chatlist chat={chat}/>
             <Chatinput chat={chat} setChat={setChat} />
         </IonPageModified>
     )
