@@ -16,6 +16,7 @@ const ChatInput = styled.textarea`
     box-sizing: border-box;
     resize: none;
     appearance: none;
+    min-height: 1em;
 `
 
 const TextArea = (props) => <ChatInput {...props} />

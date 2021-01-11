@@ -28,6 +28,7 @@ border-radius: 5px;
 padding: 10px;
 background: #519e1e;
 color: white;
+white-space: pre-wrap;
 `
 
 export default Chatlist
