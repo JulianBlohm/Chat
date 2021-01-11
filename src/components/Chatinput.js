@@ -4,11 +4,11 @@ import TextArea from '../components/TextArea'
 import SendButton from '../components/SendButton'
 
 function Chatinput({chat, setChat}) {
-    const [text, setText] = useState([])
+    const [text, setText] = useState('')
 
     function handleSubmitText(event) {
         event.preventDefault()
-        setChat(text)
+        setChat([{id: chat.length + 1, text: text},...chat])
         setText('')
     }
 
@@ -30,6 +30,9 @@ const Chattools = styled.form`
     align-items: center;
     width: 100%;
     padding: 5px;
+    background: black;
+    position: absolute;
+    bottom: 0;
 `
 
 export default Chatinput
