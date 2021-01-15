@@ -15,7 +15,7 @@ function Chatlist({chat}) {
 const MessageArea = styled.section`
 display: flex;
 flex-direction: column;
-flex-wrap: wrap;
+flex-wrap: nowrap;
 grid-gap: 5px;
 margin-bottom: 60px;
 overflow-y: scroll;
