@@ -12,8 +12,7 @@ function Chatinput({ chat, setChat }) {
 
     function handleSubmitText(event) {
         event.preventDefault()
-        setChat([...chat,{ id: chat.length + 1, text: text }])
-        //focus on newest messsage
+        setChat([...chat,{ id: chat.length + 1, text: text.trim() }])
         setText('')
     }
 
