@@ -8,7 +8,6 @@ function Tab1() {
     const [chat, setChat] = useState([
         { id: 1, text: 'Schreibe etwas um den Chat zu beginnen' },
     ])
-    console.log(chat)
 
     return (
         <IonPageModified>

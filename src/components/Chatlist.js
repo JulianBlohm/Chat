@@ -6,8 +6,6 @@ function Chatlist({ chat }) {
 
     const messages = useRef([])
 
-    console.log(messages)
-
     function focusNewMessage() {
         messages.current[messages.current.length - 1].scrollIntoView(false)
     }
