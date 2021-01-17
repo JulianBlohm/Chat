@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components/macro'
 
 function Chatlist({chat}) {
+
+    useEffect(() => focusNewMessage(),[chat])
+
+    const messages = useRef([])
+
+    console.log(messages)
+
+    function focusNewMessage() {
+        messages.current[messages.current.length - 1].scrollIntoView(false)
+    }
+    
     return (
         <MessageArea>
-            {chat.map((message) => 
-            <Message key={message.id}>
+            {chat.map((message, index) => 
+            <Message ref={(element) => messages.current[index] = element} key={message.id}>
                 {message.text}
             </Message>)}
         </MessageArea>
@@ -19,7 +30,7 @@ flex-wrap: nowrap;
 grid-gap: 5px;
 margin-bottom: 60px;
 overflow-y: scroll;
-margin: 10px;
+padding: 10px;
 `
 
 const Message = styled.p`
