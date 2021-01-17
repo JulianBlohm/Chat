@@ -40,9 +40,8 @@ const MessageArea = styled.ul`
 const Message = styled.li`
     margin: 0;
     border-radius: 5px;
-    color: white;
-    white-space: pre-line;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
 `
 
 const MessageText = styled.p`
